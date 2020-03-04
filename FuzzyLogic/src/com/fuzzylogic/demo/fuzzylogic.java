@@ -22,10 +22,10 @@ public class fuzzylogic {
 		FunctionBlock fb = fis.getFunctionBlock(null);
 
 		// Set inputs
-		fb.setVariable("system", 1);
-		fb.setVariable("network", 1);
-		fb.setVariable("webapp", 1);
-		fb.setVariable("malware", 1);
+		fb.setVariable("system", 9);
+		fb.setVariable("network", 9);
+		fb.setVariable("webapp", 9);
+		fb.setVariable("malware", 9);
 
 		// Evaluate
 		fb.evaluate();

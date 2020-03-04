@@ -1,19 +1,5 @@
-/*
-	Example: A tip calculation FIS (fuzzy inference systemtem)
-	Calculates tip based on 'servie' and 'food'
-
-	If you want to about this example (and fuzzy logic), please 
-	read Matlab's tutorial on fuzzy logic toolbox 
-	http://www.mathworks.com/access/helpdesk/help/pdf_doc/fuzzy/fuzzy.pdf
-
-									Pablo Cingolani 
-									pcingola@users.sourceforge.network
-*/
-
-// Block definition (there may be more than one block per file)
 FUNCTION_BLOCK FUZZY_SCENARIO	
 
-// Define input variables
 VAR_INPUT				
 	system : REAL;
 	network : REAL;
@@ -21,12 +7,10 @@ VAR_INPUT
 	malware : REAL;
 END_VAR
 
-// Define output variable
 VAR_OUTPUT				
 	scenario : REAL;
 END_VAR
 
-// Fuzzify input variables : {'low', 'middle' , 'high'}
 FUZZIFY system			
 	TERM S_BG	:= (0, 1) (2, 1) (4, 0);
 	TERM S_IM	:= (2, 0) (4, 1) (6, 0);
@@ -53,9 +37,87 @@ END_FUZZIFY
 
 // Defzzzify output variable 
 DEFUZZIFY scenario
-	TERM SCN01 := (0, 0) (1, 1) (2, 0);
-	TERM SCN02 := (1, 0) (2, 1) (3, 0);
-	
+	TERM SCN01 := (0, 0) (1 1) (2, 0);
+	TERM SCN02 := (1, 0) (2 1) (3, 0);
+	TERM SCN03 := (2, 0) (3 1) (4, 0);
+	TERM SCN04 := (3, 0) (4 1) (5, 0);
+	TERM SCN05 := (4, 0) (5 1) (6, 0);
+	TERM SCN06 := (5, 0) (6 1) (7, 0);
+	TERM SCN07 := (6, 0) (7 1) (8, 0);
+	TERM SCN08 := (7, 0) (8 1) (9, 0);
+	TERM SCN09 := (8, 0) (9 1) (10, 0);
+	TERM SCN10 := (9, 0) (10 1) (11, 0);
+	TERM SCN11 := (10, 0) (11 1) (12, 0);
+	TERM SCN12 := (11, 0) (12 1) (13, 0);
+	TERM SCN13 := (12, 0) (13 1) (14, 0);
+	TERM SCN14 := (13, 0) (14 1) (15, 0);
+	TERM SCN15 := (14, 0) (15 1) (16, 0);
+	TERM SCN16 := (15, 0) (16 1) (17, 0);
+	TERM SCN17 := (16, 0) (17 1) (18, 0);
+	TERM SCN18 := (17, 0) (18 1) (19, 0);
+	TERM SCN19 := (18, 0) (19 1) (20, 0);
+	TERM SCN20 := (19, 0) (20 1) (21, 0);
+	TERM SCN21 := (20, 0) (21 1) (22, 0);
+	TERM SCN22 := (21, 0) (22 1) (23, 0);
+	TERM SCN23 := (22, 0) (23 1) (24, 0);
+	TERM SCN24 := (23, 0) (24 1) (25, 0);
+	TERM SCN25 := (24, 0) (25 1) (26, 0);
+	TERM SCN26 := (25, 0) (26 1) (27, 0);
+	TERM SCN27 := (26, 0) (27 1) (28, 0);
+	TERM SCN28 := (27, 0) (28 1) (29, 0);
+	TERM SCN29 := (28, 0) (29 1) (30, 0);
+	TERM SCN30 := (29, 0) (30 1) (31, 0);
+	TERM SCN31 := (30, 0) (31 1) (32, 0);
+	TERM SCN32 := (31, 0) (32 1) (33, 0);
+	TERM SCN33 := (32, 0) (33 1) (34, 0);
+	TERM SCN34 := (33, 0) (34 1) (35, 0);
+	TERM SCN35 := (34, 0) (35 1) (36, 0);
+	TERM SCN36 := (35, 0) (36 1) (37, 0);
+	TERM SCN37 := (36, 0) (37 1) (38, 0);
+	TERM SCN38 := (37, 0) (38 1) (39, 0);
+	TERM SCN39 := (38, 0) (39 1) (40, 0);
+	TERM SCN40 := (39, 0) (40 1) (41, 0);
+	TERM SCN41 := (40, 0) (41 1) (42, 0);
+	TERM SCN42 := (41, 0) (42 1) (43, 0);
+	TERM SCN43 := (42, 0) (43 1) (44, 0);
+	TERM SCN44 := (43, 0) (44 1) (45, 0);
+	TERM SCN45 := (44, 0) (45 1) (46, 0);
+	TERM SCN46 := (45, 0) (46 1) (47, 0);
+	TERM SCN47 := (46, 0) (47 1) (48, 0);
+	TERM SCN48 := (47, 0) (48 1) (49, 0);
+	TERM SCN49 := (48, 0) (49 1) (50, 0);
+	TERM SCN50 := (49, 0) (50 1) (51, 0);
+	TERM SCN51 := (50, 0) (51 1) (52, 0);
+	TERM SCN52 := (51, 0) (52 1) (53, 0);
+	TERM SCN53 := (52, 0) (53 1) (54, 0);
+	TERM SCN54 := (53, 0) (54 1) (55, 0);
+	TERM SCN55 := (54, 0) (55 1) (56, 0);
+	TERM SCN56 := (55, 0) (56 1) (57, 0);
+	TERM SCN57 := (56, 0) (57 1) (58, 0);
+	TERM SCN58 := (57, 0) (58 1) (59, 0);
+	TERM SCN59 := (58, 0) (59 1) (60, 0);
+	TERM SCN60 := (59, 0) (60 1) (61, 0);
+	TERM SCN61 := (60, 0) (61 1) (62, 0);
+	TERM SCN62 := (61, 0) (62 1) (63, 0);
+	TERM SCN63 := (62, 0) (63 1) (64, 0);
+	TERM SCN64 := (63, 0) (64 1) (65, 0);
+	TERM SCN65 := (64, 0) (65 1) (66, 0);
+	TERM SCN66 := (65, 0) (66 1) (67, 0);
+	TERM SCN67 := (66, 0) (67 1) (68, 0);
+	TERM SCN68 := (67, 0) (68 1) (69, 0);
+	TERM SCN69 := (68, 0) (69 1) (70, 0);
+	TERM SCN70 := (69, 0) (70 1) (71, 0);
+	TERM SCN71 := (70, 0) (71 1) (72, 0);
+	TERM SCN72 := (71, 0) (72 1) (73, 0);
+	TERM SCN73 := (72, 0) (73 1) (74, 0);
+	TERM SCN74 := (73, 0) (74 1) (75, 0);
+	TERM SCN75 := (74, 0) (75 1) (76, 0);
+	TERM SCN76 := (75, 0) (76 1) (77, 0);
+	TERM SCN77 := (76, 0) (77 1) (78, 0);
+	TERM SCN78 := (77, 0) (78 1) (79, 0);
+	TERM SCN79 := (78, 0) (79 1) (80, 0);
+	TERM SCN80 := (79, 0) (80 1) (81, 0);
+	TERM SCN81 := (80, 0) (81 1) (82, 0);	
 	
 	METHOD : COG;
 	DEFAULT := 0;
@@ -66,8 +128,87 @@ RULEBLOCK No1
 	ACT : MIN;
 	ACCU : MAX;
 
-	RULE 0: 	IF system IS S_BG AND network IS N_BG AND webapp IS W_BG AND malware IS M_BG THEN scenario IS SCN01;
-	RULE 1: 	IF system IS S_BG AND network IS N_BG AND webapp IS W_BG AND malware IS M_IM THEN scenario IS SCN02;
+	RULE 0: 	IF system IS S_BG AND network IS N_BG AND webapp IS W_BG AND malware IS M_BG THEN scenario IS SCN01
+	RULE 1: 	IF system IS S_BG AND network IS N_BG AND webapp IS W_BG AND malware IS M_IM THEN scenario IS SCN02
+	RULE 2: 	IF system IS S_BG AND network IS N_BG AND webapp IS W_BG AND malware IS M_EX THEN scenario IS SCN03
+	RULE 3: 	IF system IS S_BG AND network IS N_BG AND webapp IS W_IM AND malware IS M_BG THEN scenario IS SCN04
+	RULE 4: 	IF system IS S_BG AND network IS N_BG AND webapp IS W_IM AND malware IS M_IM THEN scenario IS SCN05
+	RULE 5: 	IF system IS S_BG AND network IS N_BG AND webapp IS W_IM AND malware IS M_EX THEN scenario IS SCN06
+	RULE 6: 	IF system IS S_BG AND network IS N_BG AND webapp IS W_EX AND malware IS M_BG THEN scenario IS SCN07
+	RULE 7: 	IF system IS S_BG AND network IS N_BG AND webapp IS W_EX AND malware IS M_IM THEN scenario IS SCN08
+	RULE 8: 	IF system IS S_BG AND network IS N_BG AND webapp IS W_EX AND malware IS M_EX THEN scenario IS SCN09
+	RULE 9: 	IF system IS S_BG AND network IS N_IM AND webapp IS W_BG AND malware IS M_BG THEN scenario IS SCN10
+	RULE 10: 	IF system IS S_BG AND network IS N_IM AND webapp IS W_BG AND malware IS M_IM THEN scenario IS SCN11
+	RULE 11: 	IF system IS S_BG AND network IS N_IM AND webapp IS W_BG AND malware IS M_EX THEN scenario IS SCN12
+	RULE 12: 	IF system IS S_BG AND network IS N_IM AND webapp IS W_IM AND malware IS M_BG THEN scenario IS SCN13
+	RULE 13: 	IF system IS S_BG AND network IS N_IM AND webapp IS W_IM AND malware IS M_IM THEN scenario IS SCN14
+	RULE 14: 	IF system IS S_BG AND network IS N_IM AND webapp IS W_IM AND malware IS M_EX THEN scenario IS SCN15
+	RULE 15: 	IF system IS S_BG AND network IS N_IM AND webapp IS W_EX AND malware IS M_BG THEN scenario IS SCN16
+	RULE 16: 	IF system IS S_BG AND network IS N_IM AND webapp IS W_EX AND malware IS M_IM THEN scenario IS SCN17
+	RULE 17: 	IF system IS S_BG AND network IS N_IM AND webapp IS W_EX AND malware IS M_EX THEN scenario IS SCN18
+	RULE 18: 	IF system IS S_BG AND network IS N_EX AND webapp IS W_BG AND malware IS M_BG THEN scenario IS SCN19
+	RULE 19: 	IF system IS S_BG AND network IS N_EX AND webapp IS W_BG AND malware IS M_IM THEN scenario IS SCN20
+	RULE 20: 	IF system IS S_BG AND network IS N_EX AND webapp IS W_BG AND malware IS M_EX THEN scenario IS SCN21
+	RULE 21: 	IF system IS S_BG AND network IS N_EX AND webapp IS W_IM AND malware IS M_BG THEN scenario IS SCN22
+	RULE 22: 	IF system IS S_BG AND network IS N_EX AND webapp IS W_IM AND malware IS M_IM THEN scenario IS SCN23
+	RULE 23: 	IF system IS S_BG AND network IS N_EX AND webapp IS W_IM AND malware IS M_EX THEN scenario IS SCN24
+	RULE 24: 	IF system IS S_BG AND network IS N_EX AND webapp IS W_EX AND malware IS M_BG THEN scenario IS SCN25
+	RULE 25: 	IF system IS S_BG AND network IS N_EX AND webapp IS W_EX AND malware IS M_IM THEN scenario IS SCN26
+	RULE 26: 	IF system IS S_BG AND network IS N_EX AND webapp IS W_EX AND malware IS M_EX THEN scenario IS SCN27
+	RULE 27: 	IF system IS S_IM AND network IS N_BG AND webapp IS W_BG AND malware IS M_BG THEN scenario IS SCN28
+	RULE 28: 	IF system IS S_IM AND network IS N_BG AND webapp IS W_BG AND malware IS M_IM THEN scenario IS SCN29
+	RULE 29: 	IF system IS S_IM AND network IS N_BG AND webapp IS W_BG AND malware IS M_EX THEN scenario IS SCN30
+	RULE 30: 	IF system IS S_IM AND network IS N_BG AND webapp IS W_IM AND malware IS M_BG THEN scenario IS SCN31
+	RULE 31: 	IF system IS S_IM AND network IS N_BG AND webapp IS W_IM AND malware IS M_IM THEN scenario IS SCN32
+	RULE 32: 	IF system IS S_IM AND network IS N_BG AND webapp IS W_IM AND malware IS M_EX THEN scenario IS SCN33
+	RULE 33: 	IF system IS S_IM AND network IS N_BG AND webapp IS W_EX AND malware IS M_BG THEN scenario IS SCN34
+	RULE 34: 	IF system IS S_IM AND network IS N_BG AND webapp IS W_EX AND malware IS M_IM THEN scenario IS SCN35
+	RULE 35: 	IF system IS S_IM AND network IS N_BG AND webapp IS W_EX AND malware IS M_EX THEN scenario IS SCN36
+	RULE 36: 	IF system IS S_IM AND network IS N_IM AND webapp IS W_BG AND malware IS M_BG THEN scenario IS SCN37
+	RULE 37: 	IF system IS S_IM AND network IS N_IM AND webapp IS W_BG AND malware IS M_IM THEN scenario IS SCN38
+	RULE 38: 	IF system IS S_IM AND network IS N_IM AND webapp IS W_BG AND malware IS M_EX THEN scenario IS SCN39
+	RULE 39: 	IF system IS S_IM AND network IS N_IM AND webapp IS W_IM AND malware IS M_BG THEN scenario IS SCN40
+	RULE 40: 	IF system IS S_IM AND network IS N_IM AND webapp IS W_IM AND malware IS M_IM THEN scenario IS SCN41
+	RULE 41: 	IF system IS S_IM AND network IS N_IM AND webapp IS W_IM AND malware IS M_EX THEN scenario IS SCN42
+	RULE 42: 	IF system IS S_IM AND network IS N_IM AND webapp IS W_EX AND malware IS M_BG THEN scenario IS SCN43
+	RULE 43: 	IF system IS S_IM AND network IS N_IM AND webapp IS W_EX AND malware IS M_IM THEN scenario IS SCN44
+	RULE 44: 	IF system IS S_IM AND network IS N_IM AND webapp IS W_EX AND malware IS M_EX THEN scenario IS SCN45
+	RULE 45: 	IF system IS S_IM AND network IS N_EX AND webapp IS W_BG AND malware IS M_BG THEN scenario IS SCN46
+	RULE 46: 	IF system IS S_IM AND network IS N_EX AND webapp IS W_BG AND malware IS M_IM THEN scenario IS SCN47
+	RULE 47: 	IF system IS S_IM AND network IS N_EX AND webapp IS W_BG AND malware IS M_EX THEN scenario IS SCN48
+	RULE 48: 	IF system IS S_IM AND network IS N_EX AND webapp IS W_IM AND malware IS M_BG THEN scenario IS SCN49
+	RULE 49: 	IF system IS S_IM AND network IS N_EX AND webapp IS W_IM AND malware IS M_IM THEN scenario IS SCN50
+	RULE 50: 	IF system IS S_IM AND network IS N_EX AND webapp IS W_IM AND malware IS M_EX THEN scenario IS SCN51
+	RULE 51: 	IF system IS S_IM AND network IS N_EX AND webapp IS W_EX AND malware IS M_BG THEN scenario IS SCN52
+	RULE 52: 	IF system IS S_IM AND network IS N_EX AND webapp IS W_EX AND malware IS M_IM THEN scenario IS SCN53
+	RULE 53: 	IF system IS S_IM AND network IS N_EX AND webapp IS W_EX AND malware IS M_EX THEN scenario IS SCN54
+	RULE 54: 	IF system IS S_EX AND network IS N_BG AND webapp IS W_BG AND malware IS M_BG THEN scenario IS SCN55
+	RULE 55: 	IF system IS S_EX AND network IS N_BG AND webapp IS W_BG AND malware IS M_IM THEN scenario IS SCN56
+	RULE 56: 	IF system IS S_EX AND network IS N_BG AND webapp IS W_BG AND malware IS M_EX THEN scenario IS SCN57
+	RULE 57: 	IF system IS S_EX AND network IS N_BG AND webapp IS W_IM AND malware IS M_BG THEN scenario IS SCN58
+	RULE 58: 	IF system IS S_EX AND network IS N_BG AND webapp IS W_IM AND malware IS M_IM THEN scenario IS SCN59
+	RULE 59: 	IF system IS S_EX AND network IS N_BG AND webapp IS W_IM AND malware IS M_EX THEN scenario IS SCN60
+	RULE 60: 	IF system IS S_EX AND network IS N_BG AND webapp IS W_EX AND malware IS M_BG THEN scenario IS SCN61
+	RULE 61: 	IF system IS S_EX AND network IS N_BG AND webapp IS W_EX AND malware IS M_IM THEN scenario IS SCN62
+	RULE 62: 	IF system IS S_EX AND network IS N_BG AND webapp IS W_EX AND malware IS M_EX THEN scenario IS SCN63
+	RULE 63: 	IF system IS S_EX AND network IS N_IM AND webapp IS W_BG AND malware IS M_BG THEN scenario IS SCN64
+	RULE 64: 	IF system IS S_EX AND network IS N_IM AND webapp IS W_BG AND malware IS M_IM THEN scenario IS SCN65
+	RULE 65: 	IF system IS S_EX AND network IS N_IM AND webapp IS W_BG AND malware IS M_EX THEN scenario IS SCN66
+	RULE 66: 	IF system IS S_EX AND network IS N_IM AND webapp IS W_IM AND malware IS M_BG THEN scenario IS SCN67
+	RULE 67: 	IF system IS S_EX AND network IS N_IM AND webapp IS W_IM AND malware IS M_IM THEN scenario IS SCN68
+	RULE 68: 	IF system IS S_EX AND network IS N_IM AND webapp IS W_IM AND malware IS M_EX THEN scenario IS SCN69
+	RULE 69: 	IF system IS S_EX AND network IS N_IM AND webapp IS W_EX AND malware IS M_BG THEN scenario IS SCN70
+	RULE 70: 	IF system IS S_EX AND network IS N_IM AND webapp IS W_EX AND malware IS M_IM THEN scenario IS SCN71
+	RULE 71: 	IF system IS S_EX AND network IS N_IM AND webapp IS W_EX AND malware IS M_EX THEN scenario IS SCN72
+	RULE 72: 	IF system IS S_EX AND network IS N_EX AND webapp IS W_BG AND malware IS M_BG THEN scenario IS SCN73
+	RULE 73: 	IF system IS S_EX AND network IS N_EX AND webapp IS W_BG AND malware IS M_IM THEN scenario IS SCN74
+	RULE 74: 	IF system IS S_EX AND network IS N_EX AND webapp IS W_BG AND malware IS M_EX THEN scenario IS SCN75
+	RULE 75: 	IF system IS S_EX AND network IS N_EX AND webapp IS W_IM AND malware IS M_BG THEN scenario IS SCN76
+	RULE 76: 	IF system IS S_EX AND network IS N_EX AND webapp IS W_IM AND malware IS M_IM THEN scenario IS SCN77
+	RULE 77: 	IF system IS S_EX AND network IS N_EX AND webapp IS W_IM AND malware IS M_EX THEN scenario IS SCN78
+	RULE 78: 	IF system IS S_EX AND network IS N_EX AND webapp IS W_EX AND malware IS M_BG THEN scenario IS SCN79
+	RULE 79: 	IF system IS S_EX AND network IS N_EX AND webapp IS W_EX AND malware IS M_IM THEN scenario IS SCN80
+	RULE 80: 	IF system IS S_EX AND network IS N_EX AND webapp IS W_EX AND malware IS M_EX THEN scenario IS SCN81
 END_RULEBLOCK
 
 END_FUNCTION_BLOCK

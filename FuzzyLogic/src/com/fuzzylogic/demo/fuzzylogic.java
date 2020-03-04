@@ -22,10 +22,10 @@ public class fuzzylogic {
 		FunctionBlock fb = fis.getFunctionBlock(null);
 
 		// Set inputs
-		fb.setVariable("system", 10);
-		fb.setVariable("network", 10);
-		fb.setVariable("webapp", 10);
-		fb.setVariable("malware", 70);
+		fb.setVariable("system", 1);
+		fb.setVariable("network", 1);
+		fb.setVariable("webapp", 1);
+		fb.setVariable("malware", 1);
 
 		// Evaluate
 		fb.evaluate();
@@ -34,7 +34,7 @@ public class fuzzylogic {
 		fb.getVariable("scenario").defuzzify();
 
 		// Print ruleSet
-		// System.out.println(fb); FCL 파일 보여주기
+		//System.out.println(fb); //FCL 파일 보여주기
 		
 		// FCL에서  결과 메소드를 Center Of Gravity을 통해 추출하므로 결과가 소스점까지 반환
 		// 결과 형 변환: double -> long -> int

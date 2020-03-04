@@ -1,0 +1,151 @@
+/*
+	Example: A tip calculation FIS (fuzzy inference system)
+	Calculates tip based on 'servie' and 'food'
+
+	If you want to about this example (and fuzzy logic), please 
+	read Matlab's tutorial on fuzzy logic toolbox 
+	http://www.mathworks.com/access/helpdesk/help/pdf_doc/fuzzy/fuzzy.pdf
+
+									Pablo Cingolani 
+									pcingola@users.sourceforge.net
+*/
+
+// Block definition (there may be more than one block per file)
+FUNCTION_BLOCK FUZZY_SCENARIO	
+
+// Define input variables
+VAR_INPUT				
+	system : REAL;
+	network : REAL;
+	webapp : REAL;
+	malware : REAL;
+END_VAR
+
+// Define output variable
+VAR_OUTPUT				
+	scenario : REAL;
+END_VAR
+
+// Fuzzify input variables : {'low', 'middle' , 'high'}
+FUZZIFY system			
+	TERM S_BG	:= (0, 0) (0, 2) (2, 1) (4, 0);
+	TERM S_IM	:= (2, 0) (4, 1) (6, 0);
+	TERM S_EX	:= (4, 0) (6, 1) (10, 1) (10, 0);
+END_FUZZIFY
+
+FUZZIFY network			
+	TERM N_BG	:= (0, 0) (0, 2) (2, 1) (4, 0);
+	TERM N_IM	:= (2, 0) (4, 1) (6, 0);
+	TERM N_EX	:= (4, 0) (6, 1) (10, 1) (10, 0);
+END_FUZZIFY
+
+FUZZIFY webapp			
+	TERM W_BG	:= (0, 0) (0, 2) (2, 1) (4, 0);
+	TERM W_IM	:= (2, 0) (4, 1) (6, 0);
+	TERM W_EX	:= (4, 0) (6, 1) (10, 1) (10, 0);
+END_FUZZIFY
+
+FUZZIFY malware			
+	TERM M_BG	:= (0, 0) (0, 2) (2, 1) (4, 0);
+	TERM M_IM	:= (2, 0) (4, 1) (6, 0);
+	TERM M_EX	:= (4, 0) (6, 1) (10, 1) (10, 0);
+END_FUZZIFY
+
+// Defzzzify output variable 
+DEFUZZIFY scenario			
+	TERM SCN01 := 0;
+	TERM SCN02 := 1;
+	TERM SCN03 := 2;
+	TERM SCN04 := 3;
+	TERM SCN05 := 4;
+	TERM SCN06 := 5;
+	TERM SCN07 := 6;
+	TERM SCN08 := 7;
+	TERM SCN09 := 8;
+	TERM SCN10 := 9;
+	TERM SCN11 := 10;
+	TERM SCN12 := 11;
+	TERM SCN13 := 12;
+	TERM SCN14 := 13;
+	TERM SCN15 := 14;
+	TERM SCN16 := 15;
+	TERM SCN17 := 16;
+	TERM SCN18 := 17;
+	TERM SCN19 := 18;
+	TERM SCN20 := 19;
+	TERM SCN21 := 20;
+	TERM SCN22 := 21;
+	TERM SCN23 := 22;
+	TERM SCN24 := 23;
+	TERM SCN25 := 24;
+	TERM SCN26 := 25;
+	TERM SCN27 := 26;
+	TERM SCN28 := 27;
+	TERM SCN29 := 28;
+	TERM SCN30 := 29;
+	TERM SCN31 := 30;
+	TERM SCN32 := 31;
+	TERM SCN33 := 32;
+	TERM SCN34 := 33;
+	TERM SCN35 := 34;
+	TERM SCN36 := 35;
+	TERM SCN37 := 36;
+	TERM SCN38 := 37;
+	TERM SCN39 := 38;
+	TERM SCN40 := 39;
+	TERM SCN41 := 40;
+	TERM SCN42 := 41;
+	TERM SCN43 := 42;
+	TERM SCN44 := 43;
+	TERM SCN45 := 44;
+	TERM SCN46 := 45;
+	TERM SCN47 := 46;
+	TERM SCN48 := 47;
+	TERM SCN49 := 48;
+	TERM SCN50 := 49;
+	TERM SCN51 := 50;
+	TERM SCN52 := 51;
+	TERM SCN53 := 52;
+	TERM SCN54 := 53;
+	TERM SCN55 := 54;
+	TERM SCN56 := 55;
+	TERM SCN57 := 56;
+	TERM SCN58 := 57;
+	TERM SCN59 := 58;
+	TERM SCN60 := 59;
+	TERM SCN61 := 60;
+	TERM SCN62 := 61;
+	TERM SCN63 := 62;
+	TERM SCN64 := 63;
+	TERM SCN65 := 64;
+	TERM SCN66 := 65;
+	TERM SCN67 := 66;
+	TERM SCN68 := 67;
+	TERM SCN69 := 68;
+	TERM SCN70 := 69;
+	TERM SCN71 := 70;
+	TERM SCN72 := 71;
+	TERM SCN73 := 72;
+	TERM SCN74 := 73;
+	TERM SCN75 := 74;
+	TERM SCN76 := 75;
+	TERM SCN77 := 76;
+	TERM SCN78 := 77;
+	TERM SCN79 := 78;
+	TERM SCN80 := 79;
+	TERM SCN81 := 80;
+	
+	METHOD : COG;		// Use 'Center Of Gravity' defuzzification method
+	DEFAULT := 0;		// Default value is 0 (if no rule activates defuzzifier)
+END_DEFUZZIFY
+
+RULEBLOCK No1
+	AND : MIN;			// Use 'min' for 'and' (also implicit use 'max' for 'or' to fulfill DeMorgan's Law)
+	ACT : MIN;			// Use 'min' activation method
+	ACCU : MAX;			// Use 'max' accumulation method
+
+	RULE 0: 	IF (SYS IS S_BG) AND (NET IS N_BG) AND (WEB IS W_BG) AND (MAL IS M_BG) THEN (RST IS SCN01);
+	RULE 1: 	IF (SYS IS S_BG) AND (NET IS N_BG) AND (WEB IS W_BG) AND (MAL IS M_IM) THEN (RST IS SCN02);
+END_RULEBLOCK
+
+END_FUNCTION_BLOCK

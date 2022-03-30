@@ -1,5 +1,5 @@
 /**
- * @ref 	https://jfuzzylogic.sourceforge.net
+ * @ref 	http://jfuzzylogic.sourceforge.net/html/index.html
  */
 
 package com.fuzzylogic.demo;
@@ -34,10 +34,10 @@ public class fuzzylogic {
 		fb.getVariable("scenario").defuzzify();
 
 		// Print ruleSet
-		//System.out.println(fb); //FCL ÆÄÀÏ º¸¿©ÁÖ±â
+		//System.out.println(fb); //FCL íŒŒì¼ ë³´ì—¬ì£¼ê¸°
 		
-		// FCL¿¡¼­  °á°ú ¸Þ¼Òµå¸¦ Center Of GravityÀ» ÅëÇØ ÃßÃâÇÏ¹Ç·Î °á°ú°¡ ¼Ò½ºÁ¡±îÁö ¹ÝÈ¯
-		// °á°ú Çü º¯È¯: double -> long -> int
+		// FCLì—ì„œ  ê²°ê³¼ ë©”ì†Œë“œë¥¼ Center Of Gravityì„ í†µí•´ ì¶”ì¶œí•˜ë¯€ë¡œ ê²°ê³¼ê°€ ì†ŒìŠ¤ì ê¹Œì§€ ë°˜í™˜
+		// ê²°ê³¼ í˜• ë³€í™˜: double -> long -> int
 		double row_result = fb.getVariable("scenario").getValue();
 		int result = (int)Math.round( row_result );
 		
